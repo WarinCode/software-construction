@@ -7,6 +7,7 @@ public class Test {
     public static void main(String []args){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your money: ");
+
         try {
             money = scanner.nextInt();
         } catch (Exception e){

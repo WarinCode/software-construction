@@ -2,6 +2,9 @@
 /Lab02/JavaApplication76/nbproject/private/
 /Lab02/JavaApplication76/build/
 
+.idea
+.idea/*
+
 out
 out/*
 /Lab02/JavaApplication/nbproject/private/

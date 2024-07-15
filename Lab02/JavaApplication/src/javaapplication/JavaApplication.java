@@ -17,9 +17,10 @@ public class JavaApplication extends javax.swing.JFrame {
      */
     public JavaApplication() {
         initComponents();
-        this.score = 0;
-        this.grade = "";
+        this.jTextField1.grabFocus();
+        this.money = 0;
         this.isSuccess = false;
+        this.setResizable(false);
     }
 
     /**
@@ -34,23 +35,24 @@ public class JavaApplication extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Java Application");
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Bright", 1, 18)); // NOI18N
-        jLabel1.setText("Enter your score:");
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        jLabel1.setText("Enter your money: ");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        jTextField1.setToolTipText("");
+        jTextField1.setCaretColor(new java.awt.Color(51, 51, 255));
+        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 255));
-        jButton1.setFont(new java.awt.Font("Lucida Bright", 0, 18)); // NOI18N
-        jButton1.setText("OK");
+        jButton1.setBackground(new java.awt.Color(51, 204, 255));
+        jButton1.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
+        jButton1.setText("Calculate");
+        jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,86 +60,67 @@ public class JavaApplication extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setBorder(null);
+        jScrollPane2.setViewportView(jTextArea2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.calculateGrade();
-        if(this.isSuccess){
-            this.jLabel2.setText("Your grade is " + this.grade);
-        } else {
-            this.jLabel2.setText("");
-        }
-        this.jTextField1.grabFocus();
-    }//GEN-LAST:event_jButton1ActionPerformed
-    
-    private void calculateGrade(){
+        this.isSuccess = false;
         try {
-            this.isSuccess = false;
-            this.score = Integer.parseInt(this.jTextField1.getText());
-            if(this.score < 0 || this.score > 100) throw new Exception("Invalid score!");
-            else this.isSuccess = true;
+            this.money = Integer.parseInt(this.jTextField1.getText());
+            this.isSuccess = true;
         } catch(NumberFormatException e){
             JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         } catch(Exception e){
             JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         } finally {
-            this.jTextField1.setText("");
+            this.jTextArea2.setText("");
             if(this.isSuccess){
-                if (this.score >= 80 && this.score <= 100) this.grade = "A";
-                else if (this.score >= 75 && this.score <= 79) this.grade = "B+";
-                else if (this.score >= 70 && this.score <= 74) this.grade = "B";
-                else if(this.score >= 65 && this.score <= 69) this.grade = "C+";
-                else if(this.score >= 60 && this.score <= 64) this.grade = "C";
-                else if(this.score >= 50 && this.score <= 59) this.grade = "D+";
-                else if(this.score >= 40 && this.score <= 49) this.grade = "D";
-                else if (this.score <= 39) this.grade = "F";
+                MoneyCounter.classify(this.money);
+                this.jTextArea2.setText(MoneyCounter.getMoney());
+            } else {
+                this.jTextField1.setText("");
             }
+            this.jTextField1.grabFocus();
         }
-    }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -174,12 +157,57 @@ public class JavaApplication extends javax.swing.JFrame {
     }
     
     private boolean isSuccess;
-    private String grade;
-    private int score;
+    private int money;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+}
+
+class MoneyCounter {
+    public static int m1000 = 0;
+    public static int m500 = 0;
+    public static int m100 = 0;
+    public static int m50 = 0;
+    public static int m20 = 0;
+    public static int m10 = 0;
+    public static int m5 = 0;
+    public static int m2 = 0;
+    public static int m1 = 0;
+
+    public static void classify(int money){
+        m1000 = money / 1000;
+        money %= 1000;
+        m500 = money / 500;
+        money %= 500;
+        m100 = money / 100;
+        money %= 100;
+        m50 = money / 50;
+        money %= 50;
+        m20 = money / 20;
+        money %= 20;
+        m10 = money / 10;
+        money %= 10;
+        m5 = money / 5;
+        money %= 5;
+        m2 = money / 2;
+        money %= 2;
+        m1 = money;
+    }
+
+    public static String getMoney(){
+        int []moneyArray = { m1000, m500, m100, m50, m20, m10, m5, m2, m1 };
+        String []textArray = { "1000 -> ", "500 -> ", "100 -> ", "50 -> ", "20 -> ", "10 -> ", "5 -> ", "2 -> ", "1 -> " };
+        String result = "";
+        
+        for(int i = 0; i < moneyArray.length; i++){
+            if(moneyArray[i] != 0){
+                result += textArray[i] + moneyArray[i] + "\n";
+            }
+        }
+        return result;
+    }
 }

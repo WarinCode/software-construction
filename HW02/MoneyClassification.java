@@ -1,4 +1,4 @@
-package HW2;
+package HW02;
 import java.util.Scanner;
 
 public class MoneyClassification {

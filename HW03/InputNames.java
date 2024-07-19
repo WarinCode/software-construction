@@ -1,4 +1,4 @@
-package HW3;
+package HW03;
 import java.util.Scanner;
 
 public class InputNames {

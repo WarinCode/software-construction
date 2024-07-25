@@ -7,7 +7,7 @@ public class InputNames {
         System.out.print("Enter your name : ");
         String fullname = sc.nextLine().trim();
 
-        String []strings = fullname.split(" ");
+        String []strings = fullname.split("[ ]{1,}");
         String firstname = strings[0];
         String lastname = strings[1];
         System.out.println("My name is " + firstname);

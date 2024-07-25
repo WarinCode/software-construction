@@ -4,10 +4,6 @@ import java.util.ArrayList;
 
 public class TestArray{
     public static void main(String[] args){
-        run();
-    }
-
-    public static void run(){
         Scanner sc = new Scanner(System.in);
         int value = 0;
         int n = sc.nextInt();
@@ -26,35 +22,3 @@ public class TestArray{
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        Scanner sc = new Scanner(System.in);
-//        int value = 0;
-//        int n = sc.nextInt();
-//        int[] numbers = new int[n];
-//
-//        for(int i = 0; i < numbers.length; i++){
-//            System.out.print("Enter a number " + (i + 1) + " : ");
-//            value = sc.nextInt();
-//            numbers[i] = value;
-//        }
-//
-//        for(int j = 0; j < numbers.length; j++){
-//            if(numbers[j] % 2 == 0){
-//                System.out.println("The number of array[" + j + "]" +  " is even number");
-//            } else {
-//                System.out.println("The number of array[" + j + "]" +  " is odd number");
-//            }
-//        }

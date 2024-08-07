@@ -17,8 +17,8 @@ public class SortArray {
         System.out.println(Arrays.toString(array));
 
         int []array2 = new int[DEFAULT_SIZE];
-        for(int j = DEFAULT_SIZE, k = 0; j > 0; j--, k++){
-            array2[k] = array[j - 1];
+        for(int j = DEFAULT_SIZE - 1, k = 0; j >= 0; j--, k++){
+            array2[k] = array[j];
         }
         System.out.println(Arrays.toString(array2));
     }

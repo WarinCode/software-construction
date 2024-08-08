@@ -1,4 +1,4 @@
-package HW04;
+package HW05;
 
 public class Array2D {
     public static void main(String []args){

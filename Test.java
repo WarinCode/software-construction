@@ -1,9 +1,3 @@
-package midterm;
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.ArrayList;
-
 public class Test{
     public class PrimeNumber {
         public static boolean isPrimeNumber(int number){

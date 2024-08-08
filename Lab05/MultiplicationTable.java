@@ -1,4 +1,4 @@
-package HW04;
+package Lab05;
 
 public class MultiplicationTable {
     public static void main(String []args){

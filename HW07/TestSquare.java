@@ -10,9 +10,9 @@ public class TestSquare {
         while(square.getSide() <= 0){
             try {
                 System.out.print("Enter the side number of the square:");
-                square.setSide(Integer.parseInt(sc.next()));
+                square = new Square(Integer.parseInt(sc.next()));
                 if(square.getSide() <= 0) {
-                    throw new Exception("Please enter only integer numbers!");
+                    throw new Exception("Please enter only integer number!");
                 }
             } catch(NumberFormatException e){
                 System.out.println(e.getMessage());

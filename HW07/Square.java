@@ -17,7 +17,7 @@ public class Square {
         this.side = side;
     }
 
-    public void calculate(){
+    public void calculateArea(){
         this.area = this.getSide() * this.getSide();
     }
 

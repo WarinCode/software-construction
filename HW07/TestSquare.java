@@ -21,7 +21,7 @@ public class TestSquare {
             }
         }
 
-        square.calculate();
+        square.calculateArea();
         int result = square.getArea();
 
         System.out.printf("The result of the area square is %d", result);

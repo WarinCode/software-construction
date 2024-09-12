@@ -40,6 +40,6 @@ public abstract class AbstractBankAccount{
 
         @Override
         public String toString(){
-            return "accountName: " + this.getAccountName() + ", balance: " + this.getBalnace();
+            return "accountName = " + this.getAccountName() + ", balance = " + this.getBalnace();
         }
 }

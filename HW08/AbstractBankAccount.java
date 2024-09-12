@@ -1,6 +1,6 @@
 package HW08;
 
-public abstract  class AbstractBankAccount{
+public abstract class AbstractBankAccount{
         private String accountName = null;
         private double balance = 0.0;
 
@@ -13,9 +13,9 @@ public abstract  class AbstractBankAccount{
             this.setBalance(amount);
         }
 
-        public abstract void deposit(double amount);
-        public abstract void withdraw(double amount);
-        public abstract void transfer(double amount, AbstractBankAccount ba);
+        protected abstract void deposit(double amount) throws Exception;
+        protected abstract void withdraw(double amount) throws Exception;
+        protected abstract void transfer(double amount, AbstractBankAccount ba) throws Exception;
 
         public double getBalnace(){
             return this.balance;
@@ -29,7 +29,7 @@ public abstract  class AbstractBankAccount{
             return this.accountName;
         }
 
-        private void setAccountName(String accountName){
+        protected void setAccountName(String accountName){
             this.accountName = accountName;
         }
 

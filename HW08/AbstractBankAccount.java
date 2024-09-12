@@ -37,4 +37,9 @@ public abstract class AbstractBankAccount{
             System.out.printf("The balance in %s account is %g", this.getAccountName(), this.getBalnace());
             System.out.println();
         }
+
+        @Override
+        public String toString(){
+            return "accountName: " + this.getAccountName() + ", balance: " + this.getBalnace();
+        }
 }

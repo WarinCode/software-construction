@@ -43,4 +43,9 @@ public class BankAccount extends AbstractBankAccount {
             System.out.println();
         }
     }
+
+    @Override
+    public String toString(){
+        return super.toString();
+    }
 }

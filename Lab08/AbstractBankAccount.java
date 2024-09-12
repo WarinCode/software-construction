@@ -8,6 +8,9 @@ public abstract class AbstractBankAccount{
         public AbstractBankAccount(String accountName){
             this.setAccountName(accountName);
         }
+        public AbstractBankAccount(double amount){
+        this.setBalance(amount);
+    }
         public AbstractBankAccount(String accountName, double amount){
             this.setAccountName(accountName);
             this.setBalance(amount);

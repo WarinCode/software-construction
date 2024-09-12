@@ -7,6 +7,9 @@ public class BankAccount extends AbstractBankAccount {
     public BankAccount(String accountName){
         super(accountName);
     }
+    public BankAccount(double amount) {
+        super(amount);
+    }
     public BankAccount(String accountName, double amount){
         super(accountName, amount);
     }

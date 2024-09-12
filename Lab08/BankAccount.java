@@ -1,5 +1,4 @@
-package HW08;
-import HW08.AbstractBankAccount;
+package Lab08;
 
 public class BankAccount extends AbstractBankAccount {
     public BankAccount(){
@@ -13,13 +12,17 @@ public class BankAccount extends AbstractBankAccount {
     }
 
     @Override
+    public String toString(){
+        return super.toString();
+    }
+
+    @Override
     public void deposit(double amount) throws Exception {
         if(amount <= 0){
             throw new Exception("Invalid amount!");
         }
         double result = this.getBalnace() + amount;
         this.setBalance(result);
-//        System.out.println("Deposit successful.");
     }
 
     @Override
@@ -29,7 +32,6 @@ public class BankAccount extends AbstractBankAccount {
         }
         double result = this.getBalnace() - amount;
         this.setBalance(result);
-//        System.out.println("Withdraw successful.");
     }
 
     @Override
@@ -42,10 +44,5 @@ public class BankAccount extends AbstractBankAccount {
             System.out.printf("Transfer to account %s successful", ba.getAccountName());
             System.out.println();
         }
-    }
-
-    @Override
-    public String toString(){
-        return super.toString();
     }
 }

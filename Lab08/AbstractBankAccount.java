@@ -1,4 +1,4 @@
-package HW08;
+package Lab08;
 
 public abstract class AbstractBankAccount{
         private String accountName = null;
@@ -34,7 +34,7 @@ public abstract class AbstractBankAccount{
         }
 
         public void showBalance(){
-            System.out.printf("The balance in %s account is %g", this.getAccountName(), this.getBalnace());
+            System.out.printf("%s'balance is %g", this.getAccountName(), this.getBalnace());
             System.out.println();
         }
 

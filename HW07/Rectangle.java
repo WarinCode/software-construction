@@ -1,29 +1,32 @@
 package HW07;
 
 public class Rectangle {
-    private int width = 0;
-    private int height = 0;
-    private int area = 0;
+    private double width = 0;
+    private double height = 0;
+    private double area = 0;
 
     public Rectangle(){}
-    public Rectangle(int width, int height){
+    public Rectangle(double width, double height){
         this.setWidth(width);
         this.setHeight(height);
     }
 
-    public int getWidth(){
+    public double getWidth(){
         return this.width;
     }
 
-    public int getHeight(){
+    public double getHeight(){
         return this.height;
     }
 
-    public void setWidth(int width){
+    public void setWidth(double width) throws IllegalArgumentException{
+        if(width <= 0){
+            throw new IllegalArgumentException("Invalid width!");
+        }
         this.width = width;
     }
 
-    public void setHeight(int height){
+    public void setHeight(double height){
         this.height = height;
     }
 
@@ -31,7 +34,7 @@ public class Rectangle {
         this.area = this.getWidth() * this.getHeight();
     }
 
-    public int getArea(){
+    public double getArea(){
         return this.area;
     }
 }

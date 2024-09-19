@@ -1,15 +1,20 @@
 package HW07;
+import HW07.Pizza;
 
 public class Test {
-    public static void main(String[] args) {
-        Day d = new Day();
-        d.print(); // พิมพ์วันอาทิตย์
-        d.next();
-        d.print(); // พิมพ์วันจันทร์
-        Day e = new Day();
-        for(int i = 0; i < 7; i++){ //พิมพ์ทุกวันในสัปดาห์
-            e.print();
-            e.next();
+    public static void main(String []args){
+        Pizza pizza = new Pizza();
+        String []pizzaToppings = { "Cheese", "Pepperoni", "Supreme", "Hawaiian" };
+
+        try {
+            for(String pizzaTopping : pizzaToppings){
+                pizza.addTopping(pizzaTopping);
+            }
+        } catch(ArrayIndexOutOfBoundsException e){
+            e.printStackTrace();
         }
+        pizza.printAllToppings();
+        System.out.println("Total topping = " + pizza.getTotalToppings());
+        System.out.println("Price = " + pizza.getPrice());
     }
 }

@@ -24,11 +24,11 @@ public class Pizza {
         }
     }
 
-    public int getTotalToppings(){
-        return this.totalToppings;
-    }
-
     public int getPrice(){
         return 100 + (totalToppings * MAX_TOPPING);
+    }
+
+    public int getTotalToppings(){
+        return this.totalToppings;
     }
 }

@@ -1,4 +1,4 @@
-package test;
+package counter.test;
 import counter.Counter;
 
 public class Test {

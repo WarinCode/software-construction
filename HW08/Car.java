@@ -31,11 +31,6 @@ public class Car implements Priceable {
     }
 
     @Override
-    public double sumPrice() {
-        return this.price * this.quantity;
-    }
-
-    @Override
     public void addItem(int quantity) {
         this.quantity += quantity;
     }
